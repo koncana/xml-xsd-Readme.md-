@@ -2,7 +2,7 @@
 
 The APP allows the user to write notes as an agenda.
 
-The APP sends two XML.
+The APP sends two XML to the API.
 
 The API validates them (XSD) and store the data.
 
