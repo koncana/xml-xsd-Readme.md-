@@ -11,7 +11,7 @@ The API validates them (XSD) and store the data.
 The app can send two XML:
 
   One  with the note.
-  
+  ```
   <?xml version="1.0" encoding="UTF-8"?>
 
 
@@ -27,9 +27,9 @@ The app can send two XML:
         </messages>
     </account>
 </accounts>
-  
+  ```
   The other with the registration details.
-  
+  ```
   <?xml version="1.0" encoding="UTF-8"?>
 
 <accounts xmlns="https://www.alberto.com/accounts"
@@ -47,6 +47,7 @@ The app can send two XML:
         </details>
     </account>
 </accounts>
+```
   
 ## Screenshots
 
