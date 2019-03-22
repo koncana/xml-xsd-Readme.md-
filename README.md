@@ -55,6 +55,7 @@ XML of notes
 
 XML of registration details
 
+https://github.com/koncana/xml-xsd-Readme.md-/blob/master/img/XML%20details.JPG
 
 
 
