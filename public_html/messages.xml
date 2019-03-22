@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<accounts xmlns="https://www.alberto.com/accounts"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="https://www.alberto.com/accounts accounts.xsd">
+    <account>
+        <messages>
+            <message>
+                <image>https://firebasestorage.googleapis.com/</image>
+                <text>Prueba</text>
+            </message>
+            <message>
+                <image>https://firebasestorage.googleapis.com/2</image>
+                <text>Prueba2</text>
+            </message>
+            <message>
+                <image>https://firebasestorage.googleapis.com/3</image>
+                <text>Prueba3</text>
+            </message>
+        </messages>
+    </account>
+</accounts>

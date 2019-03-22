@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.alberto.com/accounts"
+           xmlns="https://www.alberto.com/accounts"
+           elementFormDefault="qualified">
+    
+    <!--    Elements    -->
+    
+    <xs:element name="accounts" type="accounts"/>
+    <xs:element name="cuentas" substitutionGroup="accounts"/>
+    
+    <xs:element name="account" type="account"/>
+    <xs:element name="cuenta" substitutionGroup="account"/>
+    
+    <xs:element name="details" type="details"/>
+    <xs:element name="detalles" substitutionGroup="details"/>
+    
+    <xs:element name="detail" type="detail"/>
+    <xs:element name="detalle" substitutionGroup="detail"/>
+    
+    <xs:element name="age" type="age"/>
+    <xs:element name="edad" substitutionGroup="age"/>
+    
+    <xs:element name="country" type="country"/>
+    <xs:element name="pais" substitutionGroup="country"/>
+    
+    <xs:element name="image" type="image"/>
+    <xs:element name="imagen" substitutionGroup="image"/>
+    
+    <xs:element name="nickname" type="nickname"/>
+    <xs:element name="alias" substitutionGroup="nickname"/>
+    
+    <xs:element name="sex" type="sex"/>
+    <xs:element name="sexo" substitutionGroup="sex"/>
+    
+    <xs:element name="messages" type="messages"/>
+    <xs:element name="mensajes" substitutionGroup="messages"/>
+    
+    <xs:element name="message" type="message"/>
+    <xs:element name="mensaje" substitutionGroup="message"/>
+    
+    <xs:element name="text" type="text"/>
+    <xs:element name="texto" substitutionGroup="text"/>
+    
+    <!--    Restrictions    -->
+    
+    <xs:simpleType name="text">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="message">
+        <xs:sequence>
+            <xs:element ref="image"/>  
+            <xs:element ref="text"/>                     
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="messages">
+        <xs:sequence>
+            <xs:element ref="message" minOccurs="0" maxOccurs="unbounded"/>                     
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="sex">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Man"/>
+                    <xs:enumeration value="Woman"/>
+                    <xs:enumeration value="Other"/>
+                </xs:restriction>                  
+            </xs:simpleType>               
+        </xs:list>
+    </xs:simpleType>
+    
+    <xs:simpleType name="nickname">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]{2,20}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="image">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="https://firebasestorage.googleapis.com/.*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="country">
+        <xs:list>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="France"/>
+                    <xs:enumeration value="Spain"/>
+                    <xs:enumeration value="Italy"/>
+                </xs:restriction>                  
+            </xs:simpleType>               
+        </xs:list>
+    </xs:simpleType>
+    
+    <xs:simpleType name="age">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="18"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="detail">
+        <xs:sequence>
+            <xs:element ref="age"/>
+            <xs:element ref="country"/>  
+            <xs:element ref="image"/>   
+            <xs:element ref="nickname"/>   
+            <xs:element ref="sex"/>                    
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="details">
+        <xs:sequence>
+            <xs:element ref="detail"/>                     
+        </xs:sequence>
+    </xs:complexType>
+       
+    <xs:complexType name="account">
+        <xs:choice>
+            <xs:element ref="details"/>  
+            <xs:element ref="messages"/>                    
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name="accounts">
+        <xs:sequence>
+            <xs:element ref="account" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType> 
+    
+    
+</xs:schema>

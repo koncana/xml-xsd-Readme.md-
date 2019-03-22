@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<accounts xmlns="https://www.alberto.com/accounts"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="https://www.alberto.com/accounts accounts.xsd">
+    <account>
+        <details>
+            <detail>
+                <age>19</age>
+                <country>Spain</country>
+                <image>https://firebasestorage.googleapis.com/</image>
+                <nickname>Test</nickname>
+                <sex>Woman</sex>
+            </detail>
+        </details>
+    </account>
+    <account>
+        <details>
+            <detail>
+                <age>22</age>
+                <country>France</country>
+                <image>https://firebasestorage.googleapis.com/6</image>
+                <nickname>Testtwo</nickname>
+                <sex>Man</sex>
+            </detail>
+        </details>
+    </account>
+    <account>
+        <details>
+            <detail>
+                <age>30</age>
+                <country>Italy</country>
+                <image>https://firebasestorage.googleapis.com/8</image>
+                <nickname>Testthree</nickname>
+                <sex>Other</sex>
+            </detail>
+        </details>
+    </account>
+</accounts>
