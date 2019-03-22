@@ -52,6 +52,7 @@ The app can send two XML:
 
 XML of notes
 
+https://github.com/koncana/xml-xsd-Readme.md-/blob/master/img/XML%20messages.JPG
 
 XML of registration details
 
